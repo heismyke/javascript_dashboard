@@ -10,3 +10,4 @@ deleteButton.addEventListener("click", function () {
 addUserButton.addEventListener("click", function () {
     add()
 })
+

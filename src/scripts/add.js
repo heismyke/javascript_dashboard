@@ -5,5 +5,5 @@ var isAddUserButtonClicked = false;
 
 export const add = () => {
     isAddUserButtonClicked = true;
-    addUI.style.display = 'block';
+    addUI.style.display = 'flex';
 }

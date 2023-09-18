@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/heismyke/javascript_dashboard/issues"
   },
-  "homepage": "https://github.com/heismyke/javascript_dashboard#readme"
+  "homepage": "https://github.com/heismyke/javascript_dashboard#readme",
+  "dependencies": {
+    "wow.js": "^1.2.2"
+  }
 }
