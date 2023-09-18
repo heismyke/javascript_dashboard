@@ -10,3 +10,10 @@
 .delUI{
     background-color: rgba(0, 0, 0, 0.4);
 }
+
+.cancelUI{
+    display: none;
+}
+.removeBG{
+    background-color: none;
+}

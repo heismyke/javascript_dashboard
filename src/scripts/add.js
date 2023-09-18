@@ -1,15 +1,25 @@
 export const addUserButton = document.getElementById('addBtn');
- const addUI = document.getElementById('addUI');
+ export const addUI = document.getElementById('addUI');
 const addUserUi = document.getElementById('addUserUi');
-var isAddUserButtonClicked = false;
+const isHidden = addUI.classList.contains('hidden');
 
-export const add = () => {
-    isAddUserButtonClicked = true;
-    addUI.style.display = 'flex';
-    addUI.classList.add('addUI');
+import { cancel } from "./cancel.js";
+import { cancelBtn } from "./cancel.js";
+
+export const add = () => {  
+
+    if (isHidden){
+        addUI.style.display = 'flex';
+        addUI.classList.add('addUI');
+    }else{
+        isHidden
+    }
+  
 }
 
-addUI.addEventListener('click', function (e) {
-    console.log(e.target)
-   
+cancelBtn.addEventListener('click' , function() {
+    cancel()
 })
+
+
+

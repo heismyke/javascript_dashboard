@@ -12,6 +12,8 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
+
+
 </head>
 <body>
  <main class="w-[100%] h-[100vh]  relative">
@@ -51,10 +53,10 @@
         </div>  
     </div>
     <div  id="addUI" class="w-[100%] h-[100vh] items-center  justify-center absolute top-0 hidden ">
-        <div class="w-[90%]  md:w-[40%] lg:w-[25%] h-[500px] bg-white mx-auto animate__animated  animate__fadeInDown">
-            <div class="w-[100%] h-[60px]  px-3 flex justify-between items-center border border-b border-b-slate-200">
+        <div id="addDialog"  class="w-[90%]  md:w-[40%] lg:w-[25%] h-[500px] bg-white mx-auto animate__animated  animate__fadeInDown ronded-lg removeBg">
+            <div  class="w-[100%] h-[60px]  px-3 flex justify-between items-center border border-b border-b-slate-200">
                 <h1 class="text-xl font-sans text-gray-500 font-bold">Add employees</h1>
-                <i class="fa-solid fa-xmark text-slate-500 text-2xl cursor-pointer"></i>
+                <i id="cancelIcon"  class="fa-solid fa-xmark text-slate-500 text-2xl cursor-pointer "></i>
             </div>
         </div>
     </div>
