@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,10 @@
     <link href="/dist/output.css" rel="stylesheet">
     <link rel="stylesheet" href="./node_modules/wow.js/css/libs/animate.css">
     <script src="https://kit.fontawesome.com/bcf7712443.js" crossorigin="anonymous"></script>
-   
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 </head>
 <body>
  <main class="w-[100%] h-[100vh]  relative">
@@ -47,7 +51,7 @@
         </div>
     </div>
     <div  id="addUI" class="w-[100%] h-[100vh] items-center  justify-center absolute top-0 hidden addUI">
-        <div class="w-[90%]  md:w-[40%] lg:w-[40%] h-[400px] bg-white mx-auto wow bounceInDown">
+        <div class="w-[90%]  md:w-[40%] lg:w-[40%] h-[400px] bg-white mx-auto animate__animated animate__bounce">
 
         </div>
     </div>
@@ -56,6 +60,7 @@
  <script type="module"  src="./src/scripts/main.js"></script>
  <script src="./node_modules/wow.js/dist/wow.js"></script>
  <script>
+    import 'animate.css';
     new WOW().init();
 </script>
 </body>
