@@ -943,6 +943,10 @@ video {
     gap: 1rem;
   }
 
+  .md\:rounded {
+    border-radius: 0.25rem;
+  }
+
   .md\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
