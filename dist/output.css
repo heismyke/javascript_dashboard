@@ -607,6 +607,10 @@ video {
   height: 100%;
 }
 
+.h-\[500px\] {
+  height: 500px;
+}
+
 .w-\[10\%\] {
   width: 10%;
 }
@@ -773,6 +777,10 @@ video {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+.delUI{
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
 @media (min-width: 768px) {
   .md\:-bottom-16 {
     bottom: -4rem;
@@ -812,6 +820,10 @@ video {
 
   .md\:w-\[90\%\] {
     width: 90%;
+  }
+
+  .md\:w-\[30\%\] {
+    width: 30%;
   }
 
   .md\:items-end {
@@ -910,6 +922,10 @@ video {
 
   .lg\:w-\[90\%\] {
     width: 90%;
+  }
+
+  .lg\:w-\[30\%\] {
+    width: 30%;
   }
 
   .lg\:items-center {

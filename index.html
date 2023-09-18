@@ -48,10 +48,15 @@
             <button id="addBtn" class="w-[55%] h-[40px] bg-green-500 text-[16px] rounded text-white flex justify-center items-center gap-3 ">
                 <i class="fa-solid fa-circle-plus"></i>
                 Add New Employees</button>
+        </div>  
+    </div>
+    <div  id="addUI" class="w-[100%] h-[100vh] items-center  justify-center absolute top-0 hidden ">
+        <div class="w-[90%]  md:w-[40%] lg:w-[25%] h-[500px] bg-white mx-auto animate__animated  animate__bounceInDown">
+
         </div>
     </div>
-    <div  id="addUI" class="w-[100%] h-[100vh] items-center  justify-center absolute top-0 hidden addUI">
-        <div class="w-[90%]  md:w-[40%] lg:w-[40%] h-[400px] bg-white mx-auto animate__animated  animate__bounceInDown">
+    <div  id="delUI" class="w-[100%] h-[100vh] items-center  justify-center absolute top-0 hidden delUI">
+        <div id="addUserUi" class="w-[90%]  md:w-[40%] lg:w-[40%] h-[400px] bg-white mx-auto animate__animated  animate__bounceInDown ">
 
         </div>
     </div>
@@ -60,7 +65,6 @@
  <script type="module"  src="./src/scripts/main.js"></script>
  <script src="./node_modules/wow.js/dist/wow.js"></script>
  <script>
-    import 'animate.css';
     new WOW().init();
 </script>
 </body>
