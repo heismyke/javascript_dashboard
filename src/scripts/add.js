@@ -1,10 +1,8 @@
 export const addUserButton = document.getElementById('addBtn');
  export const addUI = document.getElementById('addUI');
-const addUserUi = document.getElementById('addUserUi');
 const isHidden = addUI.classList.contains('hidden');
 
-import { cancel } from "./cancel.js";
-import { cancelBtn } from "./cancel.js";
+
 
 export const add = () => {  
 
@@ -17,9 +15,7 @@ export const add = () => {
   
 }
 
-cancelBtn.addEventListener('click' , function() {
-    cancel()
-})
+
 
 
 

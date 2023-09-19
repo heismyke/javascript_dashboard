@@ -1,5 +1,5 @@
 export const deleteButton = document.getElementById('delBtn');
-const delUI = document.getElementById('delUI');
+export const delUI = document.getElementById('delUI');
 var isDeleteButtonClicked = false;
 
 export const del = () => {

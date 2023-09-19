@@ -863,6 +863,10 @@ video {
     width: 90%;
   }
 
+  .md\:w-\[30\%\] {
+    width: 30%;
+  }
+
   .md\:items-end {
     align-items: flex-end;
   }
@@ -959,6 +963,10 @@ video {
 
   .lg\:w-\[90\%\] {
     width: 90%;
+  }
+
+  .lg\:w-\[30\%\] {
+    width: 30%;
   }
 
   .lg\:items-center {

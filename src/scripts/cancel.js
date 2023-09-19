@@ -1,18 +1,23 @@
 // import { add } from "./add";
 
-export const cancelBtn = document.getElementById('cancelIcon');
-const xmark = cancelBtn.classList.contains('fa-xmark')
-const addDialog = document.getElementById('addDialog');
-
+export const cancelBtn = document.querySelectorAll('.cancelIcon');
 import { addUI } from "./add.js";
+import { delUI } from "./del.js";
+const addDialog = document.getElementById('addDialog');
+    cancelBtn.forEach((button) => {
+        button.addEventListener('click', function() {
+            cancel()
+        });
+    })
+
+
+
+
 
 
 export function cancel(){
-    if(xmark){
-        
-        addUI.style.display = 'none';
-    }
-
+    addUI.style.display = 'none';
+    delUI.style.display = 'none';
 }
 
 
