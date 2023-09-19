@@ -53,11 +53,32 @@
         </div>  
     </div>
     <div  id="addUI" class="w-[100%] h-[100vh] items-center  justify-center absolute top-0 hidden ">
-        <div id="addDialog"  class="w-[90%]  md:w-[40%] lg:w-[25%] h-[500px] bg-white mx-auto animate__animated  animate__fadeInDown ronded-lg removeBg">
+        <div id="addDialog"  class="w-[90%]  md:w-[40%] lg:w-[25%] h-[600px] bg-white mx-auto animate__animated  animate__fadeInDown ronded-lg removeBg">
             <div  class="w-[100%] h-[60px]  px-3 flex justify-between items-center border border-b border-b-slate-200">
                 <h1 class="text-xl font-sans text-gray-500 font-bold">Add employees</h1>
                 <i id="cancelIcon"  class="fa-solid fa-xmark text-slate-500 text-2xl cursor-pointer cancelIcon"></i>
             </div>
+            <form action="">
+                <div class="w-[90%] h-[400px]  mx-auto mt-10">
+                    
+                    <div class="w-[100%] flex gap-2 flex-col h-[84px] ">
+                        <label for="Name" class="font-sans text-gray-500 text-lg mx-2">Name</label>
+                        <input type="text" class="w-[95%] mx-2 h-[50px] text-[16px] pl-3 border rounded-lg">
+                    </div>
+                    <div class="w-[100%] flex gap-2 flex-col h-[84px] mt-4">
+                        <label for="Name" class="font-sans text-gray-500 text-lg mx-2">Email</label>
+                        <input type="text" class="w-[95%] mx-2 h-[50px] text-[16px] pl-3 border rounded-lg">
+                    </div>
+                    <div class="w-[100%] flex gap-2 flex-col h-[84px] mt-4">
+                        <label for="Name" class="font-sans text-gray-500 text-lg mx-2">Address</label>
+                        <input type="text" class="w-[95%] mx-2 h-[50px] text-[16px] pl-3 border rounded-lg">
+                    </div>
+                    <div class="w-[100%] flex gap-2 flex-col h-[84px] mt-4">
+                        <label for="Name" class="font-sans text-gray-500 text-lg mx-2">Phone</label>
+                        <input type="text" class="w-[95%] mx-2 h-[50px] text-[16px] pl-3 border rounded-lg">
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
     <div  id="delUI" class="w-[100%] h-[100vh] items-center  justify-center absolute top-0 hidden delUI">
