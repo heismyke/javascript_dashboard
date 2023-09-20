@@ -3,6 +3,8 @@ import { deleteButton } from "./del.js";
 import { addUserButton } from "./add.js";
 import { add } from "./add.js";
 
+
+
 deleteButton.addEventListener("click", function () {
     del()
 })
@@ -10,4 +12,6 @@ deleteButton.addEventListener("click", function () {
 addUserButton.addEventListener("click", function () {
     add()
 })
+
+
 

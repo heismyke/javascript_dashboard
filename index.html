@@ -12,7 +12,12 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
-
+    <style>
+        .errorDiv{
+        color: red;
+        padding-left: 10px ;
+        }
+    </style>
 
 </head>
 <body>
@@ -55,42 +60,43 @@
     <div  id="addUI" class="w-[100%] h-[100vh] items-center  justify-center absolute top-0 hidden ">
         <div id="addDialog"  class="w-[90%]  md:w-[40%] lg:w-[25%] h-[600px] bg-white mx-auto animate__animated  animate__fadeInDown ronded-lg removeBg">
             <div  class="w-[100%] h-[60px]  px-3 flex justify-between items-center border border-b border-b-slate-200">
-                <h1 class="text-xl font-sans text-gray-500 font-bold">Add employees</h1>
+                <h1 class="text-2xl font-sans text-gray-500 font-bold">Add employees</h1>
                 <i id="cancelIcon"  class="fa-solid fa-xmark text-slate-500 text-2xl cursor-pointer cancelIcon"></i>
             </div>
-            <form action="">
+            <form action="" id="addUserForm">
                 <div class="w-[90%] h-[400px]  mx-auto mt-10">
                     
-                    <div class="w-[100%] flex gap-2 flex-col h-[84px] ">
+                    <div id="nameInputDiv" class="w-[100%] flex gap-2 flex-col h-[84px]  ">
                         <label for="Name" class="font-sans text-gray-500 text-lg mx-2">Name</label>
-                        <input type="text" class="w-[95%] mx-2 h-[50px] text-[16px] pl-3 border rounded-lg">
+                        <input type="text" id="name" class="w-[95%]  mx-2 h-[50px] text-[16px] pl-3 border rounded-lg">
                     </div>
                     <div class="w-[100%] flex gap-2 flex-col h-[84px] mt-4">
                         <label for="Name" class="font-sans text-gray-500 text-lg mx-2">Email</label>
-                        <input type="text" class="w-[95%] mx-2 h-[50px] text-[16px] pl-3 border rounded-lg">
+                        <input type="email" id="email" class="w-[95%] mx-2 h-[50px] text-[16px] pl-3 border rounded-lg">
                     </div>
                     <div class="w-[100%] flex gap-2 flex-col h-[84px] mt-4">
                         <label for="Name" class="font-sans text-gray-500 text-lg mx-2">Address</label>
-                        <input type="text" class="w-[95%] mx-2 h-[50px] text-[16px] pl-3 border rounded-lg">
+                        <input type="text" id="address" class="w-[95%] mx-2 h-[50px] text-[16px] pl-3 border rounded-lg">
                     </div>
                     <div class="w-[100%] flex gap-2 flex-col h-[84px] mt-4">
                         <label for="Name" class="font-sans text-gray-500 text-lg mx-2">Phone</label>
-                        <input type="text" class="w-[95%] mx-2 h-[50px] text-[16px] pl-3 border rounded-lg">
+                        <input type="number" id="number" class="w-[95%] mx-2 h-[50px] text-[16px] pl-3 border rounded-lg">
+                    </div>
+                </div>
+                <div class="w-[100%] h-[115px] bg-slate-100 flex items-center justify-end mx-auto">
+                    <div class="w-[60%] h-[80px] flex justify-center items-center gap-5 ">
+                        <button type="submit" class="w-[45%] h-[50px] bg-slate-700 rounded-lg text-lg text-white">Cancel</button>
+                        <button id="submitBtn" type="submit" class="w-[45%] h-[50px] bg-green-500 rounded-lg text-lg text-white">Add</button>
                     </div>
                 </div>
             </form>
-            <div class="w-[100%] h-[115px] bg-slate-100 flex items-center justify-end mx-auto">
-                <div class="w-[60%] h-[80px] flex justify-center items-center gap-5 ">
-                    <button class="w-[45%] h-[50px] bg-slate-700 rounded-lg text-lg text-white">Cancel</button>
-                    <button class="w-[45%] h-[50px] bg-green-500 rounded-lg text-lg text-white">Add</button>
-                </div>
-            </div>
+          
         </div>
     </div>
     <div  id="delUI" class="w-[100%] h-[100vh] items-center  justify-center absolute top-0 hidden delUI">
         <div  class="w-[90%]  md:w-[25%] lg:w-[25%] h-[400px] bg-white mx-auto animate__animated  animate__fadeInDown ">
             <div  class="w-[100%] h-[60px]  px-3 flex justify-between items-center border border-b border-b-slate-200">
-                <h1 class="text-xl font-sans text-gray-500 font-bold">Delete employees</h1>
+                <h1 class="text-2xl font-sans text-gray-500 font-bold">Delete employees</h1>
                 <i  class="fa-solid fa-xmark text-slate-500 text-2xl cursor-pointer cancelIcon"></i>
             </div>
         </div>
@@ -99,6 +105,7 @@
 
  <script type="module"  src="./src/scripts/main.js"></script>
  <script type="module"  src="./src/scripts/cancel.js"></script>
+ <script type="module"  src="./src/scripts/addUserForm.js"></script>
  <script src="./node_modules/wow.js/dist/wow.js"></script>
  <script>
     new WOW().init();
