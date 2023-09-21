@@ -1,5 +1,16 @@
-import { cancelBtn } from "./cancel.js";
+ const cancelBtn = document.querySelectorAll('.cancelIcon');
 const addUserForm = document.getElementById('addUserForm');
+
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const addressInput = document.getElementById("address");
+const phoneInput = document.getElementById("number");
+
+const name = nameInput.value;
+const email = emailInput.value;
+const address = addressInput.value;
+const phone = phoneInput.value;
+
 addUserForm.addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -16,7 +27,10 @@ addUserForm.addEventListener('submit', function(event) {
     const address = addressInput.value;
     const phone = phoneInput.value;
 
+
+
     if (!name && !errorDiv) {
+        console.log(nameInput);
         const nameInputDiv = document.getElementById('nameInputDiv');
         const errorDiv = document.createElement('div');
         errorDiv.textContent = "Name is required!";
@@ -91,13 +105,38 @@ addUserForm.addEventListener('submit', function(event) {
         cancelBtn.forEach((buttons) => {
             buttons.addEventListener("click", function() {
                 errorDiv.remove();
+               
             });
         })
     }else{
         null;
     }
-});
+     
 
+   
+});
+const values = {
+    name: nameInput.value,
+    email: emailInput.value,
+    address: addressInput.value,
+    phone: phoneInput.value,
+};
+cancelBtn.forEach((buttons) => {
+    buttons.addEventListener("click", function() {
+       
+        values.name = "";
+        values.email = "";
+        values.address = "";
+        values.phone = "";
+
+       
+        nameInput.value = "";
+        emailInput.value = "";
+        addressInput.value = "";
+        phoneInput.value = "";
+       
+    });
+})
 function isEmailValid(email) {
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
     emailPattern.test(email)
