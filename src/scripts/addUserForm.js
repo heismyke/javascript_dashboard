@@ -8,7 +8,8 @@ addUserForm.addEventListener('submit', function(event) {
     const addressInput = event.target.querySelector("#address");
     const phoneInput = event.target.querySelector("#number");
     let errorDiv = document.querySelector('.errorDiv');
-    let errorNumber = document.querySelector('.errorNumber');
+   
+
 
     const name = nameInput.value;
     const email = emailInput.value;
@@ -50,7 +51,7 @@ addUserForm.addEventListener('submit', function(event) {
     if(!address && !errorDiv){
         const addressInputDiv = document.getElementById('addressInputDiv');
         const errorDiv = document.createElement('div');
-        errorDiv.textContent = "Address is required you goat!";
+        errorDiv.textContent = "Address is required!";
         errorDiv.classList.add('errorDiv')
        
         addressInputDiv.appendChild(errorDiv);
@@ -63,32 +64,38 @@ addUserForm.addEventListener('submit', function(event) {
             });
         })
     }
-    if(!phone && !errorDiv){
+   
+    if(phoneInput.value.length < 11 && !errorDiv){
         const phoneInputDiv = document.getElementById('phoneInputDiv');
         const errorDiv = document.createElement('div');
-        errorDiv.textContent = "Phone number is required you prick!";
+        errorDiv.textContent = "phone number must be 11 digits ";
         errorDiv.classList.add('errorDiv')
         phoneInputDiv.appendChild(errorDiv);
         phoneInput.addEventListener("keydown", function() {
             errorDiv.remove();
-            if(phoneInput.value.length == 12){
-                const errorNumber = document.createElement('div');
-                errorNumber.textContent = "Phone number must be 11 digits long!";
-                phoneInputDiv.appendChild(errorNumber);
-            }else if (phoneInput.value.length < 12) {
-                if (errorNumber) {
-                    errorNumber.textContent = " "; 
-                }
-            }
         });
         cancelBtn.forEach((buttons) => {
             buttons.addEventListener("click", function() {
                 errorDiv.remove();
             });
         })
-        
+    }else if(phoneInput.value.length > 11 && !errorDiv){
+        const phoneInputDiv = document.getElementById('phoneInputDiv');
+        const errorDiv = document.createElement('div');
+        errorDiv.textContent = "phone number must be 11 digits ";
+        errorDiv.classList.add('errorDiv')
+        phoneInputDiv.appendChild(errorDiv);
+        phoneInput.addEventListener("keydown", function() {
+            errorDiv.remove();
+        });
+        cancelBtn.forEach((buttons) => {
+            buttons.addEventListener("click", function() {
+                errorDiv.remove();
+            });
+        })
+    }else{
+        null;
     }
-
 });
 
 function isEmailValid(email) {
