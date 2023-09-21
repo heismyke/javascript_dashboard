@@ -7,13 +7,14 @@ addUserForm.addEventListener('submit', function(event) {
     const emailInput = event.target.querySelector("#email");
     const addressesInput = event.target.querySelector("#address");
     const phoneInput = event.target.querySelector("#number");
+    let errorDiv = document.querySelector('.errorDiv');
 
     const name = nameInput.value;
     const email = emailInput.value;
     const addresses = addressesInput.value;
     const phone = phoneInput.value;
 
-    if (!name) {
+    if (!name && !errorDiv) {
         const nameInputDiv = document.getElementById('nameInputDiv');
         const errorDiv = document.createElement('div');
         errorDiv.textContent = "Name is required!";
@@ -31,7 +32,7 @@ addUserForm.addEventListener('submit', function(event) {
         });
        })
     }
-    if(!email || isEmailValid(email)) {
+    if(!email && !errorDiv || isEmailValid(email)) {
         const emailInputDiv = document.getElementById('emailInputDiv');
         const errorDiv = document.createElement('div');
         errorDiv.textContent = "Email is required!";
