@@ -1,3 +1,4 @@
+
  const cancelBtn = document.querySelectorAll('.cancelIcon');
 const addUserForm = document.getElementById('addUserForm');
 
@@ -13,11 +14,12 @@ const phone = phoneInput.value;
 
 addUserForm.addEventListener('submit', function(event) {
     event.preventDefault();
-
+    const datas = [];
     const nameInput = event.target.querySelector("#name");
     const emailInput = event.target.querySelector("#email");
     const addressInput = event.target.querySelector("#address");
     const phoneInput = event.target.querySelector("#number");
+    const tableBody = document.getElementById("table-body");
     let errorDiv = document.querySelector('.errorDiv');
    
 
@@ -30,7 +32,6 @@ addUserForm.addEventListener('submit', function(event) {
 
 
     if (!name && !errorDiv) {
-        console.log(nameInput);
         const nameInputDiv = document.getElementById('nameInputDiv');
         const errorDiv = document.createElement('div');
         errorDiv.textContent = "Name is required!";
@@ -112,9 +113,61 @@ addUserForm.addEventListener('submit', function(event) {
         null;
     }
      
+     
 
-   
+    // Create the button element and set its properties outside the loop
+    const btn = document.createElement("button");
+    btn.textContent = "delete";
+    btn.classList.add("font-mono", "text-gray-500")
+    
+    let formData = {
+        name: nameInput.value.trim(),
+        email: emailInput.value.trim(),
+        address: addressInput.value.trim(),
+        phone: phoneInput.value.trim(),
+    };
+    
+    const isEmpty = Object.values(formData).some((value) => value === "");
+    
+    if (!isEmpty) {
+        const data = {
+            id: Date.now(),
+            text: formData,
+        };
+        datas.push(data);
+    
+        const dataText = Object.values(data.text);
+    
+        const tr = document.createElement("tr");
+        tr.classList.add("h-[50px]", "tableRow");
+        tr.setAttribute("data-id", data.id);
+    
+        dataText.forEach((value) => {
+            const td = document.createElement("td");
+            td.classList.add("bg-gray-100", "text-center", "font-mono", "text-gray-500","border");
+            td.textContent = value;
+            tr.appendChild(td);
+        });
+    
+        
+        const tdWithButton = document.createElement("td");
+        tdWithButton.appendChild(btn);
+        btn.addEventListener("click", function(){
+          const index = datas.findIndex((item) => item.id === data.id);
+           if(index !== -1){
+            datas.splice(index, 1);
+            tr.remove()
+           }
+            
+        })
+        tr.appendChild(tdWithButton);
+    
+        tableBody.appendChild(tr);
+        addUserForm.reset();
+    }
+    
 });
+
 const values = {
     name: nameInput.value,
     email: emailInput.value,

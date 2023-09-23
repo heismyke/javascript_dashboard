@@ -6,3 +6,4 @@ export const del = () => {
     isDeleteButtonClicked = true;
     delUI.style.display = 'flex';
 }
+

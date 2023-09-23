@@ -17,6 +17,28 @@
         color: red;
         padding-left: 10px ;
         }
+        .tableRow{
+            border: 1px solid lightgrey;
+            border-left: none;
+            border-right: none;
+            
+        }
+        .bar::-webkit-scrollbar{
+         
+        display: none;
+
+        }
+        .bar::-webkit-scrollbar-thumb {
+
+        display: none;
+        }
+
+            .bar::-webkit-scrollbar-track {
+
+            display: none;
+            }
+    
+
     </style>
 
 </head>
@@ -100,6 +122,24 @@
                 <i  class="fa-solid fa-xmark text-slate-500 text-2xl cursor-pointer cancelIcon"></i>
             </div>
         </div>
+    </div>
+    <div class="w-[90%]  pb-5 mx-auto mt-[50px] md:mt-0 lg:mt-0 overflow-auto bar">
+        <table  class="w-[200%]">
+            
+                <div class="">
+                    <tr class="h-[50px] ">
+                        <td class=" font-mono text-slate-600">Name</td>
+                        <td class="font-mono text-slate-600">Email</td>
+                        <td class="font-mono text-slate-600">Address</td>
+                        <td class="font-mono text-slate-600">Phone</td>
+                        <td class="font-mono text-slate-600">Actions</td>
+                    </tr>   
+                </div>
+            
+             <tbody id="table-body">
+               
+             </tbody>
+        </table>
     </div>
  </main>
 
